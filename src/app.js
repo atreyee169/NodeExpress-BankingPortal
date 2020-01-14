@@ -13,3 +13,6 @@ app.get('/',function(request,response){
 app.listen(3000,function(){
   console.log("PS Project Running on port 3000!");
 });
+
+const accountData=fs.readFileSync(path.join(__dirname,'json','accounts.json'),'utf8');
+const accounts=JSON.parse(accountData);
